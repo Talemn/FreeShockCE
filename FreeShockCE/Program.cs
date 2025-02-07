@@ -47,11 +47,10 @@ while (true)
 {
     OscHelper.Receiver.OnMessageReceived += message =>
     {
-        Console.WriteLine($"Received message: {message.Address}");
+        Console.WriteLine($"Received message in bundle: {message.Address} with values: {string.Join(", ", message.Arguments)}");
     };
     OscHelper.Receiver.OnBundleReceived += _ =>
     {
-    //    Console.WriteLine($"Received message in bundle: {message.Address} with values: {string.Join(", ", message.Values)}");
     };
     Task.Delay(50).Wait();
 }
