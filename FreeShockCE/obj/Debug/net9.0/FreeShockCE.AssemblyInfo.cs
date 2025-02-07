@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FreeShockCE")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1660dfeb99f13fb55ebf82c482a6f873ab33b7f1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bbaa506aca3e6d11a71386dd7f8ec86d2de0bb73")]
 [assembly: System.Reflection.AssemblyProductAttribute("FreeShockCE")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FreeShockCE")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

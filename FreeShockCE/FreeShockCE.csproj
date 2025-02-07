@@ -14,8 +14,10 @@
       <PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.1" />
       <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="9.0.1" />
       <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-      <PackageReference Include="SharpOSC" Version="1.0.0" />
+      <PackageReference Include="OscCore" Version="1.0.5" />
       <PackageReference Include="System.Linq" Version="4.3.0" />
+      <PackageReference Include="System.Private.Uri" Version="4.3.2" />
+      <PackageReference Include="VolcanicArts.FastOSC" Version="1.1.1" />
     </ItemGroup>
 
     <ItemGroup>
@@ -28,10 +30,14 @@
       <Compile Update="HELPERS\PiShockController.cs">
         <DependentUpon>IPiShockController.cs</DependentUpon>
       </Compile>
+      <Compile Update="HELPERS\OscHelper.cs">
+        <DependentUpon>IOscHelper.cs</DependentUpon>
+      </Compile>
     </ItemGroup>
 
     <ItemGroup>
       <Folder Include="LOG\" />
+      <Folder Include="OSC\" />
     </ItemGroup>
 
 </Project>
