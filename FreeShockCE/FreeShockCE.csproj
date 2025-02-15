@@ -11,6 +11,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="MeaMod.DNS" Version="1.0.70" />
       <PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.1" />
       <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="9.0.1" />
       <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
@@ -18,6 +19,12 @@
       <PackageReference Include="System.Linq" Version="4.3.0" />
       <PackageReference Include="System.Private.Uri" Version="4.3.2" />
       <PackageReference Include="VolcanicArts.FastOSC" Version="1.1.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="VRC.OSCQuery">
+            <HintPath>Lib/vrc-oscquery-lib.dll</HintPath>
+        </Reference>
     </ItemGroup>
 
     <ItemGroup>
@@ -33,11 +40,14 @@
       <Compile Update="HELPERS\OscHelper.cs">
         <DependentUpon>IOscHelper.cs</DependentUpon>
       </Compile>
+      <Compile Update="HELPERS\OSC\OscQueryHelper.cs">
+        <DependentUpon>IOscQueryHelper.cs</DependentUpon>
+      </Compile>
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Lib\" />
       <Folder Include="LOG\" />
-      <Folder Include="OSC\" />
     </ItemGroup>
 
 </Project>

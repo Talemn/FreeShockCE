@@ -60,3 +60,5 @@ C:\Users\ronmo\source\repos\Talemn\FreeShockCE\FreeShockCE\obj\Debug\net9.0\Free
 C:\Users\ronmo\source\repos\Talemn\FreeShockCE\FreeShockCE\obj\Debug\net9.0\ref\FreeShockCE.dll
 C:\Users\ronmo\source\repos\Talemn\FreeShockCE\FreeShockCE\bin\Debug\net9.0\OscCore.dll
 C:\Users\ronmo\source\repos\Talemn\FreeShockCE\FreeShockCE\bin\Debug\net9.0\FastOSC.dll
+C:\Users\ronmo\source\repos\Talemn\FreeShockCE\FreeShockCE\bin\Debug\net9.0\vrc-oscquery-lib.dll
+C:\Users\ronmo\source\repos\Talemn\FreeShockCE\FreeShockCE\bin\Debug\net9.0\MeaMod.DNS.dll

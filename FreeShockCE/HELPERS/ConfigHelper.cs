@@ -71,11 +71,9 @@ public bool LoadConfig(string filePath)
     DataHelper.ConfigData = config;
     
     Console.ForegroundColor = ConsoleColor.Green;
-    Console.WriteLine($"Configuration ini loaded!");
+    Console.WriteLine($"Configuration json loaded!");
 
     return true;
 }
-
-
 
 }

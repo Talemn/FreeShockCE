@@ -1,8 +1,8 @@
 ﻿using FreeShockCE.HELPERS;
-using System;
-using System.Threading.Tasks;
-using FastOSC;
-using FreeShockCE.Entities;
+using VRC.OSCQuery;
+
+var tcpPort = Extensions.GetAvailableTcpPort();
+var udpPort = Extensions.GetAvailableUdpPort();
 
 Console.ForegroundColor = ConsoleColor.Green;
 Console.WriteLine("Welcome to FreeShockCE! An open-source project for masochists by masochists!");
@@ -41,16 +41,15 @@ Console.WriteLine("/////////////////////////////////////////////////////////////
 
 Console.ResetColor();
 
-OscHelper.StartOscListener();
+var oscQuery = new OSCQueryServiceBuilder()
+    .WithDefaults()
+    .WithTcpPort(tcpPort)
+    .WithUdpPort(udpPort)
+    .WithServiceName("FreeShockCE")
+    .Build();
 
-while (true)
-{
-    OscHelper.Receiver.OnMessageReceived += message =>
-    {
-        Console.WriteLine($"Received message in bundle: {message.Address} with values: {string.Join(", ", message.Arguments)}");
-    };
-    OscHelper.Receiver.OnBundleReceived += _ =>
-    {
-    };
-    Task.Delay(50).Wait();
-}
+// Manually logging the ports to see them without a logger
+Console.WriteLine($"Started OSCQueryService at TCP {tcpPort}, UDP {udpPort}");
+
+// Stops the program from ending until a key is pressed
+Console.ReadKey();
