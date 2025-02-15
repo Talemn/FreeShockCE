@@ -43,14 +43,17 @@ Console.ResetColor();
 
 OscHelper.StartOscListener();
 
+
 while (true)
 {
     OscHelper.Receiver.OnMessageReceived += message =>
     {
+        // if (!message.Address.Contains("/avatar/parameters/pishock/")) return;
         Console.WriteLine($"Received message in bundle: {message.Address} with values: {string.Join(", ", message.Arguments)}");
+        Thread.Sleep(50);
     };
     OscHelper.Receiver.OnBundleReceived += _ =>
     {
     };
-    Task.Delay(50).Wait();
+   
 }
